@@ -1,0 +1,88 @@
+.container {
+ width:400px;
+padding:10px;
+background-color:white;
+  
+}
+.wrapper{
+  display: flex;
+  justify-content:center;
+height:700px;
+align-items:center;
+}
+h1 {
+  text-align: center;
+  font-family: math;
+  padding: 36px;
+  font-size: 42px;
+  color: #aa29df;
+  position: relative;
+}
+
+marquee {
+  font-size: 21px;
+  color: red;
+  padding-bottom: 38px;
+  font-family: cursive;
+}
+td {
+  color: #f9bb0c;
+  font-size: 22px;
+  padding: 20px;
+}
+th {
+  float: left;
+  font-size: 22px;
+  color: #e14779;
+  font-family: revert;
+  padding-bottom: 15px;
+}
+input[type="text"] {
+  padding: 15px;
+  margin: 0px 0 5px 0;
+  width: 100%;
+  border: none;
+  background: #f1f1f1;
+}
+
+button {
+  background-color: #04aa6d;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.top-pad {
+  padding-top: 40px;
+   
+}
+.main{
+    background-color: #fff;
+}
+.mycol{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+
+
+
+
+.title{
+    font-weight: bold;
+    color: #ff39c2;
+}
+.form-group{
+    padding: 0;
+}
