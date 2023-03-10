@@ -15,38 +15,38 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/octavalidate@latest/native/validate.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
     <link rel="stylesheet" href="external.css" />
   </head>
 
   <body>
     <div class="wrapper">
-      <div class="container">
-        /*style="display: table"*/
-        <div class="row no-gutters shadow-lg">
+      <div class="container align-items-center">
+        <div class="row shadow-lg justify-content-center">
           <!--left-column-->
-          <div class="col-md-4 d-none d-md-block">
+          <div class="col-lg-4 p-0">
             <!--image-->
             <img
-              src="C:\Users\Gursimran\Desktop\kerala.jpg"
+              src="kerala.jpg"
               class="img-fluid"
               style="min-height: 100%"
               alt="brokeniamge"
             />
           </div>
           <!--right-column-->
-          <div class="col-md-8 bg-white">
-            <h4 class="title pt-5 pb-3">Registration Form</h4>
+          <div class="col-lg-8 px-4 bg-white">
+            <h1 class="title">Registration Form</h1>
             <form id="form" novalidate>
-              <marquee direction="right"
+              <marquee direction="right" style="padding: 0px"
                 >Fill out the form carefully for registration</marquee
               >
 
               <div class="row">
-                <h4 class="text-warning">Student Name</h4>
-                <div class="col-md-4 p-3">
+                <h4 class="px-3 py-1">Personal Details</h4>
+                <div class="col-md-4 form-group px-3">
                   <label for="First Name">First name:</label>
                   <input
-                    onblur="validate(this,regName)"
+                    onkeyup="validate(this,regName)"
                     ov-required:msg="Your Firstname is required"
                     octavalidate="R,FIRSTNAME"
                     class="form-control"
@@ -54,9 +54,10 @@
                     id="Firstname"
                     required
                   />
-                  <span class="error" id="Firstname-error-message"> </span>
+                  <span class="error text-danger" id="Firstname-error-message">
+                  </span>
                 </div>
-                <div class="col-md-4 p-3">
+                <div class="col-md-4 px-3">
                   <label for="Middle Name">Middle name:</label>
                   <input
                     onblur="validate(this,regName)"
@@ -67,9 +68,10 @@
                     id="Middlename"
                     required
                   />
-                  <span class="error" id="Middlename-error-message"> </span>
+                  <span class="error text-danger" id="Middlename-error-message">
+                  </span>
                 </div>
-                <div class="col-md-4 p-3">
+                <div class="col-md-4 form-group px-3">
                   <label for="Last Name">Last name:</label>
                   <input
                     onblur="validate(this,regName)"
@@ -79,12 +81,61 @@
                     type="text"
                     id="Lastname"
                     required
-                  /><br />
-                  <span class="error" id="Lastname-error-message"> </span>
+                  />
+                  <span class="error text-danger" id="Lastname-error-message">
+                  </span>
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-4 form-group p-3">
+                <div class="col-md-4 form-group px-3">
+                  <label for="Birthday">Birthday</label>
+                  <input
+                    ov-required:msg="Your Birthday is required"
+                    class="form-control"
+                    octavalidate="R,BIRTHDAY"
+                    type="date"
+                    id="Birthday"
+                    name="birthday"
+                    required
+                  />
+                </div>
+
+                <div class="col-md-8 px-3">
+                  <label for="Gender">Gender</label><br />
+                  <div class="py-2">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      id="Male"
+                      name="gender"
+                      value="Male"
+                    />
+                      <label for="Male">Male</label>
+
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      id="Female"
+                      name="gender"
+                      value="Female"
+                    />
+                      <label for="Female">Female</label>
+
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      id="Other"
+                      name="gender"
+                      value="Other"
+                    />
+                      <label for="Other">Other</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mt-3">
+                <h4 class="px-3">Contact Details</h4>
+                <div class="col-md-6 px-3 form-group mt-1">
                   <label for="Number">Number:</label>
                   <input
                     onblur="validate(this,regNum)"
@@ -95,22 +146,11 @@
                     id="Number"
                     required
                   />
-                  <span class="error" id="Number-error-message"> </span>
-                </div>
-                <div class="col-md-4 form-group p-3">
-                  <label for="Birthday">Birthday</label>
-                  <input
-                    ov-required:msg="Your Birthday is required"
-                    octavalidate="R,BIRTHDAY"
-                    class="form-control"
-                    type="date"
-                    id="Birthday"
-                    name="birthday"
-                    required
-                  />
+                  <span class="error text-danger" id="Number-error-message">
+                  </span>
                 </div>
 
-                <div class="col-md-4 form-group p-3">
+                <div class="col-md-6 form-group px-2">
                   <label for="Email">Email:</label>
                   <input
                     onblur="validate(this,emailRegex)"
@@ -120,42 +160,14 @@
                     placeholder="email@example.io"
                     required
                   />
-                  <span class="error" id="Email-error-message"> </span>
+                  <span class="error text-danger" id="Email-error-message">
+                  </span>
                 </div>
               </div>
-              <div class="row">
-                <div class="mb-4 form-check-inline p-3">
-                  <label for="Gender">Gender:</label>
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    id="Male"
-                    name="gender"
-                    value="Male"
-                  />
-                    <label for="Male">Male</label>
 
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    id="Female"
-                    name="gender"
-                    value="Female"
-                  />
-                    <label for="Female">Female</label>
-
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    id="Other"
-                    name="gender"
-                    value="Other"
-                  />
-                    <label for="Other">Other</label>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6 form-group p-3">
+              <div class="row mt-2">
+                <h4 class="px-3">Address Details</h4>
+                <div class="col-md-6 form-group px-3 py-1">
                   <label for="state">Select State</label>
                   <select
                     onclick="states_ddl()"
@@ -166,7 +178,7 @@
                     <option value="0">- Please select State -</option>
                   </select>
                 </div>
-                <div class="col-md-6 form-group p-3">
+                <div class="col-md-6 form-group py-1 px-2">
                   <label for="City">Select City</label>
                   <select
                     onclick="city_ddl()"
@@ -179,18 +191,21 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-6 form-group p-3">
+                <div class="col-md-6 form-group py-1 px-3">
                   <label for="Address">Address</label>
                   <textarea
                     octavalidate="R,ADDRESS"
+                    onblur="validate(this,regName)"
                     ov-required:msg="Your Address is required"
                     class="form-control"
                     id="Address"
-                    rows="3"
+                    rows="2"
                     required
                   ></textarea>
+                  <span class="error text-danger" id="Address-error-message">
+                  </span>
                 </div>
-                <div class="col-md-4 form-group p-3">
+                <div class="col-md-4 form-group py-1 px-2">
                   <label for="Landmark">Landmark</label>
                   <textarea
                     onblur="validate(this,regName)"
@@ -201,9 +216,10 @@
                     rows="2"
                     required
                   ></textarea>
-                  <span class="error" id="Landmark-error-message"> </span>
+                  <span class="error text-danger" id="Landmark-error-message">
+                  </span>
                 </div>
-                <div class="col-md-2 form-group p-3">
+                <div class="col-md-2 form-group py-1 px-2">
                   <label for="Pincode">Pincode</label>
                   <input
                     onblur="validate(this,regNum)"
@@ -218,19 +234,28 @@
                 </div>
               </div>
               <div class="row">
-                <div class="form-check col-sm-6 p-3">
+                <div class="col-md-12 px-3 py-2">
                   <input type="checkbox" class="form-check-input" id="terms" />
                   <label for="terms">I agree to the terms and conditions</label>
                 </div>
               </div>
-              <div class="d-flex align-items-center justify-content-center">
-                <div class="pb-2 w-50">
+              <div class="row">
+                <div class="col-md-6 mb-2">
                   <button
-                    type="button"
-                    class="btn btn-dark font-weight-bold mt-2"
+                    type="submit"
+                    class="btn btn-1"
                     onclick="condition(),gendr()"
                   >
-                    Submit
+                    SUBMIT
+                  </button>
+                </div>
+                <div class="col-md-6 mb-2">
+                  <button
+                    type="button"
+                    class="btn btn-1"
+                    onclick="newFunction()"
+                  >
+                    CLEAR
                   </button>
                 </div>
               </div>
@@ -257,12 +282,16 @@
     errorMsg: "Please enter only number",
   };
 
+  let erroArr = [];
+
   function validate(element, regex) {
     var regName = regex.regexValue;
     let errorPlacehoderId = element.id + "-error-message";
     if (!regName.test(element.value)) {
+      erroArr.push(errorPlacehoderId);
       document.getElementById(errorPlacehoderId).innerHTML = regex.errorMsg;
     } else {
+      erroArr = erroArr.filter((item) => item != errorPlacehoderId);
       document.getElementById(errorPlacehoderId).innerHTML = "";
     }
   }
@@ -288,8 +317,8 @@
   //     }
   // }
   function gendr() {
-    const genders = document.getElementsByName("gender");
-    const validForm = false;
+    var genders = document.getElementsByName("gender");
+    var validForm = false;
 
     let i = 0;
     while (!validForm && i < genders.length) {
@@ -324,19 +353,23 @@
       alert("Please agree to the terms and conditions to proceed further.");
     }
   }
+
   let formVal = new octaValidate("form");
   document.querySelector("#form").addEventListener("submit", function (e) {
     //prevent default action
     e.preventDefault();
-    console.error("In submit");
+    console.error(erroArr);
     //invoke the validate method
     if (formVal.validate() === true) {
       //validation successful
       alert("form has been submitted");
+      submitForm();
     } else {
       //validation failed
+      return;
     }
   });
+
   function states_ddl() {
     var State = [
       "ANDAMAN AND NICOBAR ISLANDS",
@@ -417,5 +450,23 @@
       opt.innerHTML = Cite[i];
       select.appendChild(opt);
     }
+  }
+  function submitForm() {
+    let form1 = document.getElementById("form");
+    //form1.submit();
+    var model = {
+      id: Math.random(),
+      Fname: document.getElementById("Firstname").value,
+      mname: document.getElementById("Middlename").value,
+      lname: document.getElementById("Lastname").value,
+    };
+
+    localStorage.setItem("person" + model.id, JSON.stringify(model));
+  }
+  function newFunction() {
+    document.getElementById("form").reset();
+    erroArr.forEach((item) => {
+      document.getElementById(item).innerHTML = "";
+    });
   }
 </script>
