@@ -1,30 +1,57 @@
-.container {
- width:400px;
-padding:10px;
-background-color:white;
-  
-}
-.wrapper{
-  display: flex;
-  justify-content:center;
-height:700px;
-align-items:center;
-}
-h1 {
-  text-align: center;
+body {
   font-family: math;
-  padding: 36px;
-  font-size: 42px;
-  color: #aa29df;
-  position: relative;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 980px;
+}
+.title {
+  font-family: math;
+  text-align: center;
+  font-weight: 600;
+  color: #fb0c0c;
+  font-size: 28px;
+  padding-top: 6px;
 }
 
 marquee {
-  font-size: 21px;
-  color: red;
-  padding-bottom: 38px;
-  font-family: cursive;
+  padding: 0px;
+  font-family: math;
+  color: rgb(25, 229, 236);
+  font-size: 15px;
 }
+h4 {
+  color: #fb0c0c;
+  font-size: 21px;
+  margin: 0px;
+  text-align: center;
+  max-width: 600px;
+  position: relative;
+}
+h4:before {
+  content: "";
+  width: 150px;
+  height: 1px;
+  background: #ef5350;
+  left: 80px;
+  top: 11px;
+  position: absolute;
+}
+h4:after {
+  content: "";
+  width: 150px;
+  height: 1px;
+  background: #ef5350;
+  right: 80px;
+  position: absolute;
+  top: 11px;
+}
+
 td {
   color: #f9bb0c;
   font-size: 22px;
@@ -38,51 +65,55 @@ th {
   padding-bottom: 15px;
 }
 input[type="text"] {
-  padding: 15px;
   margin: 0px 0 5px 0;
   width: 100%;
   border: none;
   background: #f1f1f1;
 }
 
-button {
-  background-color: #04aa6d;
+.btn {
+  padding: 10px 40px 10px 40px;
+  text-align: center;
+  background-size: 200%;
   color: white;
-  padding: 16px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
   width: 100%;
-  opacity: 0.9;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+}
+
+.btn:hover {
+  background-position: right center; /* change the direction of the change here */
+}
+
+.btn-1 {
+  background-image: linear-gradient(
+    to right,
+    #f6d365 0%,
+    #fda085 51%,
+    #f6d365 100%
+  );
 }
 
 .top-pad {
   padding-top: 40px;
-   
 }
-.main{
-    background-color: #fff;
+.main {
+  background-color: #fff;
 }
-.mycol{
-    padding-left: 0;
-    padding-right: 0;
+.mycol {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 @media screen and (max-width: 600px) {
-  .col-25, .col-75, input[type=submit] {
+  .col-25,
+  .col-75,
+  input[type="submit"] {
     width: 100%;
     margin-top: 0;
   }
 }
 
-
-
-
-
-.title{
-    font-weight: bold;
-    color: #ff39c2;
-}
-.form-group{
-    padding: 0;
+.form-group {
+  padding: 0;
 }
