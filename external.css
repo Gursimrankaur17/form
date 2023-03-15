@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
   font-family: math;
 }
@@ -288,3 +289,124 @@ input[type="text"] {
 .form-group {
   padding: 0;
 }
+=======
+body {
+  font-family: math;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 980px;
+}
+.title {
+  font-family: math;
+  text-align: center;
+  font-weight: 600;
+  color: #fb0c0c;
+  font-size: 28px;
+  padding-top: 6px;
+}
+
+marquee {
+  padding: 0px;
+  font-family: math;
+  color: rgb(25, 229, 236);
+  font-size: 15px;
+}
+h4 {
+  color: #fb0c0c;
+  font-size: 21px;
+  margin: 0px;
+  text-align: center;
+  max-width: 600px;
+  position: relative;
+}
+h4:before {
+  content: "";
+  width: 150px;
+  height: 1px;
+  background: #ef5350;
+  left: 80px;
+  top: 11px;
+  position: absolute;
+}
+h4:after {
+  content: "";
+  width: 150px;
+  height: 1px;
+  background: #ef5350;
+  right: 80px;
+  position: absolute;
+  top: 11px;
+}
+
+td {
+  color: #f9bb0c;
+  font-size: 22px;
+  padding: 20px;
+}
+th {
+  float: left;
+  font-size: 22px;
+  color: #e14779;
+  font-family: revert;
+  padding-bottom: 15px;
+}
+input[type="text"] {
+  margin: 0px 0 5px 0;
+  width: 100%;
+  border: none;
+  background: #f1f1f1;
+}
+
+.btn {
+  padding: 10px 40px 10px 40px;
+  text-align: center;
+  background-size: 200%;
+  color: white;
+  width: 100%;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+}
+
+.btn:hover {
+  background-position: right center; /* change the direction of the change here */
+}
+
+.btn-1 {
+  background-image: linear-gradient(
+    to right,
+    #f6d365 0%,
+    #fda085 51%,
+    #f6d365 100%
+  );
+}
+
+.top-pad {
+  padding-top: 40px;
+}
+.main {
+  background-color: #fff;
+}
+.mycol {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .col-25,
+  .col-75,
+  input[type="submit"] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+.form-group {
+  padding: 0;
+}
+>>>>>>> b515c5552b64f196a8ca16b866836cd6465c8485
