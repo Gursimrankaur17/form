@@ -9,6 +9,9 @@
       }
     </style>
     <link rel="stylesheet" href="external.css" />
+    <link rel="stylesheet" href="slick.css" />
+
+    <script type="text/javascript" src="slick.min.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -83,7 +86,7 @@
         <div class="dv py-3 px-5"></div>
       </div>
     </div>
-    <!-----------------bottom Nav bar------------->
+    <!-----------------Second Nav bar------------->
     <div class="bottom-nav">
       <!-----------------Logo------------->
       <div class="logo">GLAM</div>
@@ -139,16 +142,196 @@
       </div>
       <div class="three-col">
         <div class="out">
-        <div class="serch">
-          <input class="serch" type="text" placeholder="Search.." name="search" onclick="yy()"/>
+          <div class="serch">
+            <input
+              class="serch"
+              type="text"
+              placeholder="Search.."
+              name="search"
+              onclick="yy()"
+            />
+          </div>
+        </div>
+        <div class="sign">
+          <a href="../form/signUp.html">
+            <button class="si-bt">Signin</button></a
+          >
+        </div>
+        <div class="basket">
+          <i class="fa fa-shopping-bag" aria-hidden="true"></i>
         </div>
       </div>
-      <div class="sign">
-       <a href="../form/signUp.html"> <button  class="si-bt">Signin</button></a>
+    </div>
+    <hr style="margin: 0px 0px 5px 0px" />
+    <!-----------------Third Nav bar------------->
+    <div class="third">
+      <div class="third-nav">
+        <ul>
+          <li>
+            <a
+              href="https://www.nykaa.com/installApp"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Makeup</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.nykaa.com/giftcard.html?root=hdr_giftcards"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Skin</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.nykaa.com/stores-n-events-desktop"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Hair</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.nykaa.com/installApp"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Appliances</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.nykaa.com/installApp"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Bath&Body</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.nykaa.com/installApp"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Natural</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.nykaa.com/installApp"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Mom&Baby</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.nykaa.com/installApp"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Health&Wellness</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.nykaa.com/installApp"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Men</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.nykaa.com/installApp"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Fragrance</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.nykaa.com/installApp"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Popups</a
+            >
+          </li>
+        </ul>
       </div>
-      <div class="basket">
-        <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+      <div class="third-image">
+        <img src="./purple.png" />
       </div>
+    </div>
+    <div class="h3">
+      <h3>Best in Beauty</h3>
+    </div>
+    <div class="outer" id="content">
+      <button class="lefty paddle" id="left-button"></button>
+      <div class="inner">
+        <img src="gigi.jpeg" />
+      </div>
+
+      <div class="inner">
+        <img src="katrina.jpeg" />
+      </div>
+      <div class="inner">
+        <img src="lipstick.jpeg" />
+      </div>
+      <div class="inner">
+        <img src="priyanka.jpeg" />
+      </div>
+      <div class="inner">
+        <img src="shades.jpeg" />
+      </div>
+      <div class="inner">
+        <img src="sunscream.jpeg" />
+      </div>
+      <div class="inner">
+        <img src="wanderlust.jpeg" />
+      </div>
+
+      <button class="righty paddle" id="right-button"></button>
     </div>
   </body>
 </html>
+<script>
+  var content = document.getElementById("content"),
+    scrollStep = 200;
+
+  document
+    .getElementById("right-button")
+    .addEventListener("click", function (e) {
+      e.preventDefault();
+      let sl = content.scrollLeft,
+        cw = content.scrollWidth;
+
+      if (sl + scrollStep >= cw) {
+        content.scrollTo(cw, 0);
+      } else {
+        content.scrollTo(sl + scrollStep, 0);
+      }
+    });
+
+  document
+    .getElementById("left-button")
+    .addEventListener("click", function (e) {
+      e.preventDefault();
+      let sl = content.scrollLeft;
+
+      if (sl - scrollStep <= 0) {
+        content.scrollTo(0, 0);
+      } else {
+        content.scrollTo(sl - scrollStep, 0);
+      }
+    });
+</script>
