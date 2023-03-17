@@ -234,10 +234,12 @@ input[type="text"].serch:focus {
 
 .paddle {
   position: absolute;
-  top: 50px;
+  top: 360px;
   bottom: 0;
-  width: 30px;
-  height: 20px;
+  border-radius: 55px;
+  height: 54px;
+  width: 55px;
+  border: none;
 }
 .lefty {
   left: 0;

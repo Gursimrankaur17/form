@@ -9,9 +9,7 @@
       }
     </style>
     <link rel="stylesheet" href="external.css" />
-    <link rel="stylesheet" href="slick.css" />
 
-    <script type="text/javascript" src="slick.min.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -21,6 +19,10 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
     />
   </head>
   <body>
@@ -275,8 +277,12 @@
     <div class="h3">
       <h3>Best in Beauty</h3>
     </div>
-    <div class="outer" id="content">
-      <button class="lefty paddle" id="left-button"></button>
+    <div class="outer ml-5" id="content">
+      <button
+        type="button"
+        class="lefty paddle bi bi-arrow-left-circle-fill"
+        style="font-size: 3rem; color: #c742c7"
+      ></button>
       <div class="inner">
         <img src="gigi.jpeg" />
       </div>
@@ -300,7 +306,11 @@
         <img src="wanderlust.jpeg" />
       </div>
 
-      <button class="righty paddle" id="right-button"></button>
+      <button
+        class="righty paddle bi bi-arrow-right-circle-fill"
+        style="font-size: 3rem; color: #c742c7"
+        id="right-button"
+      ></button>
     </div>
   </body>
 </html>
